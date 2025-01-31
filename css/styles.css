@@ -1,0 +1,488 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px; /* Уменьшена высота шапки */
+    position: relative;
+}
+
+.burger {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 20;
+    margin-right: 15px;
+    font-size: 30px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.menu {
+    position: absolute;
+    top: 0px;
+    left: -350px;
+    width: 350px;
+    height: calc(100% - 50px);
+    background: rgba(0, 0, 0, 0.9);
+    transition: left 0.3s ease;
+    padding-top: 10px;
+    z-index: 10;
+}
+
+.menu.active {
+    left: 0;
+}
+
+.menu-items {
+    margin-top: 80px; /* Отступ сверху для списка страниц */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 30px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.rounded-button img {
+    border-radius: 5px; /* Укажите радиус для скругления */
+    display: block;
+    width: auto; /* Укажите нужную ширину */
+    height: 50px; /* Высота подстраивается под ширину */
+}
+
+.rounded-button {
+    display: inline-block;
+    overflow: hidden; /* Скрываем лишнюю часть элемента */
+    border-radius: 5px; /* Укажите радиус для скругления */
+    cursor: pointer; /* Указываем курсор для кликабельного элемента */
+}
+
+.text-block {
+    position: relative;
+    display: inline-block;
+    padding: 5px 20px; 
+    color: white; /* Цвет текста */
+    font-size: 18px;
+    border-radius: 10px; /* Скругление углов */
+    z-index: 1; /* Чтобы текст был над фоном */
+}
+.text-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    border-radius: 10px; /* Скругление углов */
+    z-index: -1; /* Чтобы фон был под текстом */
+}
+
+.image {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 50px;
+}
+
+.image-right {
+    float: right; /* Положение справа */
+    margin-left: 15px; /* Отступ слева от изображения */
+    border-radius: 5px;
+}
+
+.text-block1 {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.images {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images1 {
+    width: 565px; /* Ширина изображения */
+    height: auto; 
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images2 {
+    width: 492px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images3 {
+    width: 590px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 0px; /* Отступ сверху для изображения */
+}
+
+.images4 {
+    width: 298px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images5 {
+    width: 298px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+
+.images7 {
+    width: 298px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images8 {
+    width: 298px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images9 {
+    width: 462px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 0px; /* Отступ сверху для изображения */
+}
+
+.images10 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images11 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images12 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images13 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images14 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images15 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images16 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images17 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images18 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images19 {
+    width: 400px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 0px; /* Отступ сверху для изображения */
+}
+
+.images20 {
+    width: 400px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 0px; /* Отступ сверху для изображения */
+}
+
+.images21 {
+    width: 400px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 0px; /* Отступ сверху для изображения */
+}
+
+.images22 {
+    width: 490px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images23 {
+    width: 608px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images24 {
+    width: 608px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images25 {
+    width: 535px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images26 {
+    width: 535px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images27 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images28 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images29 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images30 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+.images31 {
+    width: 600px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+.images32 {
+    width: 500px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 0px; /* Отступ сверху для изображения */
+}
+
+.images33 {
+    width: 562px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 0px; /* Отступ сверху для изображения */
+}
+
+.images34 {
+    width: 750px; /* Ширина изображения */
+    height: auto;
+    float: left; /* Положение слева */
+    margin-right: 15px; /* Отступ справа от изображения */
+    border-radius: 10px;
+    padding: 20;
+    margin-top: 10px; /* Отступ сверху для изображения */
+}
+
+
+.video-player {
+    position: relative;
+    width: 400px; /* Ширина плеера */
+    height: auto;
+    margin: 10px; /* Отступ вокруг плеера */
+    border: 1px solid #000000; /* Граница плеера */
+    border-radius: 10px; /* Скругление углов */
+    overflow: hidden; /* Обрезка содержимого при необходимости */
+    top: 10px; /* Отступ сверху */
+    left: -8px; /* Отступ слева */
+}
+.video-player video {
+    width: 100%; /* Ширина видеоплеера */
+    outline: none; /* Убираем контур при выделении */
+}
